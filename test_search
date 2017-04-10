@@ -1,0 +1,16 @@
+import tweepy
+import pandas as pd
+import matplotlib.pyplot as plt
+
+pd.options.display.max_columns = 50
+pd.options.display.max_rows= 100
+pd.options.display.width= 120
+consumer_key = "lRhcXKH7Ocbkck8Q0BBp9WtZp"
+consumer_secret = "29GrBl5KJ8LBE3CBGvUN9KMmTSTCy86oHg2qoWw1Y9lRxtj159"
+
+auth = tweepy.OAuthHandler(consumer_key=consumer_key, consumer_secret=consumer_secret)
+
+api = tweepy.API(auth)
+
+results = api.search(q="IPython")
+len(results)
